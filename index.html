@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>WCAG</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3>Accesibilidad de contenido Web</h3>
+				</section>
+				<section>
+					<p>
+						WCAG es una serie de directrices sobre accesibilidad web, siendo parte del World Wide Web Consurtium (W3C), la
+						principal organización de estándares de Internet.<br/>
+						Estas directrices detallan cómo se debe trabajar el contenido web con el objetivo de ser más accesible, especialmente para personas con discapacidad.
+					</p>
+				</section>
+				<section>
+					<h3>Objetivos</h3>
+					<p>
+						Mejorar las pautas de accesibilidad para tres grupos específicos de usuarios:
+					</p>
+					<ul>
+						<li class="fragment">Las personas con <a href="https://www.descubreme.cl/descubrenos/discapacidad-cognitiva/">discapacidad cognitiva</a> o del aprendizaje.</li>
+						<li class="fragment">Las personas con baja visión.</li>
+						<li class="fragment">Las personas con discapacidad que acceden desde dispositivos móviles.</li>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<h3>Principios fundamentales</h3>
+						<p>Hasta el momento existen las WCAG 1, que contiene 14 principios que norman la accesibilidad web y la actual, WCAG 2. Actualmente 
+							se ha podido enmarcar todo en tan solo 4 principios básicos</p>
+					</section>
+					<section>
+						<h3>Perceptible</h3>
+						<blockquote>
+							Perceptible, se refiere que tanto los contenidos como la interfaz debe poder ser percibida por todos sus usuarios.
+						</blockquote>
+					</section>
+					<section>
+						<p>
+							Los <strong>contenidos audiovisuales</strong>, por ejemplo, deben tener alternativas perceptibles para personas ciegas o sordas. Existen opciones como la 
+							audiodescripción de videos, subtítulos y lengua de señas para hacer accesible el contenido.
+						</p>
+					</section>
+					<section>
+						<p>
+							Además, la interfaz, imágenes, botones, reproductores de videos y otros elementos deben ser accesibles, <strong>perfectamente identificables</strong> y 
+							ejecutables por cualquier persona en cualquier situación, dispositivo y sistema operativo.
+						</p>
+					</section>
+					<section>
+						<p>
+							El <strong>color</strong> también forma parte del grupo de indicadores relevantes, ya que existe un porcentaje de la población que posee alguna condición 
+							que no puede percibirlos correctamente. Por ejemplo, si un formulario de contacto requiere que se completen de forma obligatoria los ítem 
+							de color rojo, es un impedimento para aquellos que no tienen la capacidad de percibir los colores de la forma correcta.
+						</p>
+					</section>
+					<section>
+						<h3>Operable</h3>
+						<blockquote>
+							Esto quiere decir que una interfaz de usuario debe tener muchas maneras, y todas muy claras y advertidas, para realizar una acción o buscar un contenido. 
+							Entre más alternativas existan, mejor será su accesibilidad*.
+						</blockquote>
+					</section>
+					<section>
+						<p>
+							<strong>Asegurar toda su funcionalidad en base al teclado:</strong> Este punto es clave, ya que todo el mundo está acostumbrado a navegar con el ratón, 
+							pero si éste falla en algún minuto, o un grupo de la población no puede usarlo por distintas razones, la navegación se hace casi imposible.
+						</p>
+					</section>
+					<section>
+						<p>
+							<strong>Dar un tiempo prudente para leer y entender el contenido:</strong> muchos sitios usan herramientas como los "slider", que van cambiando rápidamente 
+							sus contenidos (sea texto o imágenes), como en un carrusel. Los tiempos en los que la información cambia deben ser lo suficientemente estudiados, 
+							como para que todos los potenciales usuarios, independientemente de su condición o edad, puedan comprenderlos.
+						</p>
+					</section>
+					<section>
+						<p>
+							<strong>No diseñar contenidos o herramientas que puedan provocar convulsiones:</strong> Existen herramientas de diseño Web que son preciosas, que cambian 
+							rápidamente de formas y colores, que le dan a un sitio un verdadero impacto, pero muchas de ellas pueden provocar ataques o convulsiones epilépticas, 
+							que pueden ser prevenidas.
+						</p>
+					</section>
+					<section>
+						<p>
+							<strong>Proporcionar medios para una navegación expedita:</strong> tanto en sitios Web como en aplicaciones, a veces, menos es más, si es que se trata de hacer un 
+							sitio intuitivo, pero también es necesario que "todos los caminos lleven a Roma".
+						</p>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
