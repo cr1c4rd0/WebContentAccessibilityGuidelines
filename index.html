@@ -173,14 +173,14 @@
 					<h2>Pautas</h2>
 				</section>
 				<section>
-					<h2>Compresible 3.1 legile</h2>
+					<h2>Comprensible 3.1 legile</h2>
 						<ul>
-							<li>3.1.1 Idioma de la página</li>
-							<li>3.1.2 Lenguaje de las partes</li>
-							<li>3.1.3 Palabras inusuales</li>
-							<li>3.1.4 Abreviaturas</li>
-							<li>3.1.5 Nivel de lectura</li>
-							<li>3.1.6 Pronunciación</li>
+							<li class="fragment">3.1.1 Idioma de la página</li>
+							<li class="fragment">3.1.2 Lenguaje de las partes</li>
+							<li class="fragment">3.1.3 Palabras inusuales</li>
+							<li class="fragment">3.1.4 Abreviaturas</li>
+							<li class="fragment">3.1.5 Nivel de lectura</li>
+							<li class="fragment">3.1.6 Pronunciación</li>
 						</ul>
 				</section>
 				<section>
@@ -599,7 +599,7 @@
 						</p>
 					</section>
 					<section>
-						<h3>G97: Proporcionar el primer uso de una abreviatura inmediatamente antes o después de la forma expandida</h3>
+						<h4>G97: Proporcionar el primer uso de una abreviatura inmediatamente antes o después de la forma expandida</h4>
 						<p class="fragment">
 							El objetivo de esta técnica es hacer que la forma expandida de una abreviatura esté disponible asociando la forma expandida con su abreviatura la primera vez que aparece dentro de una 
 							página web. La expansión de cualquier abreviatura se puede encontrar buscando en la página web el primer uso.
@@ -615,9 +615,556 @@
 					</section>
 					<section>
 						<h4>G55: Enlace a definiciones</h4>
-						<p>
+						<p class="fragment">
 							El objetivo de esta técnica es hacer que la definición de una palabra, frase o abreviatura esté disponible proporcionando la definición, ya sea dentro de la misma 
 							página Web o en una página Web diferente, y estableciendo un vínculo entre el elemento y su definición.
+						</p>
+					</section>
+					<section>
+						<h4>G62: Proporcionar un glosario</h4>
+						<p class="fragment">
+							El objetivo de esta técnica es hacer que la definición de una palabra, frase o abreviatura esté disponible proporcionando la definición en un glosario. Un glosario es una lista alfabética de 
+							palabras, frases y abreviaturas con sus definiciones. Los glosarios son más apropiados cuando las palabras, frases y abreviaturas utilizadas en el contenido se relacionan con una disciplina o 
+							área tecnológica específica. Un glosario también puede proporcionar la pronunciación de una palabra o frase.	
+						</p>
+					</section>
+					<section>
+						<h4>G70: Proporcionar una función para buscar en un diccionario en línea</h4>
+						<p class="fragment">
+							El objetivo de esta técnica es proporcionar la definición de palabras, frases, jerga o expansiones de abreviaturas agregando un mecanismo para acceder a un diccionario en línea en la página Web. 
+							Esta técnica utiliza los recursos existentes en la Web para proporcionar la definición en lugar de requerir que el autor cree un glosario u otro mecanismo dentro del sitio. 
+						</p>
+					</section>
+					<section>
+						<h4>H28: Proporcionar definiciones de abreviaturas mediante el uso de los elementos abbr y acrónimo</h4>
+						<p class="fragment">
+							El objetivo de esta técnica es proporcionar expansiones o definiciones para abreviaturas mediante el uso de los elementos <strong>abbr</strong> y <strong>acronym</strong>.
+						</p>
+					</section>
+					<section>
+						<pre data-id="code-animation">
+							<code class="hljs" data-trim data-line-numbers type="text/template">
+								<p>Sugar is commonly sold in 5 <abbr title="pound">lb.<abbr> bags.</p>
+									<p>Welcome to the <abbr title="World Wide Web">WWW</abbr>!</p> 
+							</code>
+						</pre>
+					</section>
+					<section>
+						<blockquote>
+							<p>Sugar is commonly sold in 5 <abbr title="pound">lb.<abbr> bags.</p>
+							<p>Welcome to the <abbr title="World Wide Web">WWW</abbr>!</p> 
+						</blockquote>
+					</section>
+					<section>
+						<h4>H60: Usar el elemento de enlace para enlazar a un glosario</h4>
+						<p class="fragment">
+							El objetivo de esta técnica es proporcionar un mecanismo para localizar un glosario. Cuando los términos del contenido se definen en una página de glosario independiente, se hace referencia al 
+							glosario mediante un <strong>link</strong> elemento del headelemento del documento que utiliza el glosario.
+						</p>
+					</section>
+					<section>
+						<p>
+							El <strong>rel</strong>atributo del <strong>link</strong> elemento se establece en "glosario" y el hrefatributo contiene el URI de la página del glosario. Los agentes de usuario pueden ayudar a los usuarios a acceder al glosario de forma rápida y sencilla.
+						</p>
+					</section>
+					<section>
+						<pre data-id="code-animation">
+							<code class="hljs" data-trim data-line-numbers type="text/template">
+								<link rel="glossary" href="http://www.w3.org/TR/WCAG20/#glossary">
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h4>PDF8: proporcionar definiciones para abreviaturas a través de una entrada E para un elemento de estructura</h4>
+						<p class="fragment">
+							El objetivo de esta técnica es proporcionar una expansión o definición de una abreviatura para la primera aparición de la abreviatura. Por ejemplo, una referencia a una abreviatura, como "WCAG", debe estar disponible como "Pautas de accesibilidad al contenido web (WCAG)" en su primera aparición en un documento.
+						</p>
+					</section>
+					<section>
+						<p>
+							Esto se hace configurando el texto de expansión usando una entrada /E para un elemento de estructura y normalmente se logra usando una herramienta para crear PDF. Normalmente se utiliza un elemento de estructura Span para etiquetar la abreviatura, pero la entrada /E es válida con cualquier elemento de estructura.
+						</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>3.1.5 Nivel de lectura - nivel AAA</h3>
+							<p>
+								Este criterio de éxito puede ayudar a las personas que:
+							</p>
+						<ul>
+							<li class="fragment">
+								Tiene dificultad para comprender e interpretar el lenguaje escrito (por ejemplo, artículos, instrucciones o periódicos en texto o braille), con el fin de obtener conocimientos generales o información específica.
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h4>G86: Proporcionar un resumen de texto que pueda ser entendido por personas con capacidad de lectura de nivel de educación secundaria inferior</h4>
+						<p class="fragment">
+							El objetivo de esta técnica es proporcionar un resumen de contenido complejo. El resumen se proporciona además del contenido original.	
+						</p>
+					</section>
+					<section>
+						<p>
+							Es probable que los usuarios con discapacidades que dificultan la decodificación de palabras y oraciones tengan problemas para leer y comprender textos complejos. Esta técnica proporciona una declaración breve de las ideas e información más importantes del contenido. El resumen es más fácil de leer porque usa oraciones más cortas y palabras más comunes que el original.
+						</p>
+					</section>
+					<section>
+						<p>
+							Los siguientes pasos se pueden utilizar para preparar el resumen:
+						</p>
+						<ul>
+							<li class="fragment">
+								Identificar las ideas e información más importantes en el contenido.
+							</li>
+							<li class="fragment">
+								Escriba uno o más párrafos que usen oraciones más cortas y palabras más comunes para expresar las mismas ideas e información. (El número de párrafos depende de la longitud del original).
+							</li>
+							<li class="fragment">
+								Medir la legibilidad del resumen.
+							</li>
+						</ul>
+					</section>
+					<section>
+						<ul>
+							<li>
+								Edite el resumen. Considere dividir oraciones más largas en dos o reemplazar palabras largas o desconocidas con términos más cortos y comunes.
+							</li>
+							<li class="fragment">
+								Repita los pasos 3 y 4 según sea necesario.
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h4>G103: Proporcionar ilustraciones visuales, imágenes y símbolos para ayudar a explicar ideas, eventos y procesos.</h4>
+						<p class="fragment">
+							El objetivo de esta técnica es proporcionar ilustraciones visuales que ayuden a los usuarios con problemas de lectura a comprender textos difíciles que describen conceptos o procesos. Las ilustraciones se proporcionan además del texto.
+						</p>
+					</section>
+					<section>
+						<p>
+							Es probable que los usuarios con discapacidades que dificultan la decodificación de palabras y oraciones tengan problemas para leer y comprender textos complejos. Los cuadros, diagramas, animaciones, fotografías, organizadores gráficos u otros materiales visuales a menudo ayudan a estos usuarios. Por ejemplo:
+						</p>
+					</section>
+					<section>
+						<ul>
+							<li>
+								Los cuadros y gráficos ayudan a los usuarios a comprender datos complejos.
+							</li>
+							<li class="fragment">
+								Los diagramas, diagramas de flujo, videos y animaciones ayudan a los usuarios a comprender los procesos.
+							</li>
+							<li class="fragment">
+								Los mapas conceptuales y otros organizadores gráficos ayudan a los usuarios a comprender cómo se relacionan las ideas entre sí.
+							</li>
+							<li class="fragment">
+								Las fotografías, dibujos y videos pueden ayudar a los usuarios a comprender eventos u objetos naturales o históricos.
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h4>G79: Proporcionar una versión hablada del texto.</h4>
+						<p class="fragment">
+							Algunos usuarios que tienen dificultades para pronunciar (decodificar) palabras en texto escrito encuentran muy útil escuchar el texto leído en voz alta. Este servicio ahora se puede proporcionar fácilmente utilizando voz humana grabada o voz sintética.
+						</p>
+					</section>
+					<section>
+						<p>
+							Por ejemplo, hay una serie de productos que los autores pueden usar para convertir texto en voz sintética y luego guardar la versión hablada como un archivo de audio. Luego se puede proporcionar un enlace a la versión hablada dentro del contenido. El costo depende en parte de la calidad de la voz utilizada y de si es probable que el texto cambie con frecuencia.
+						</p>
+					</section>
+					<section>
+						<p>
+							Este método es efectivo para pequeñas cantidades de texto y para documentos más largos que no cambian con frecuencia.
+						</p>
+						<ul>
+							<li class="fragment">
+								Grabe a alguien leyendo el texto en voz alta o use una herramienta que convierta documentos individuales o pasajes seleccionados en voz sintética. Elija la voz más clara y atractiva si hay una opción disponible.
+							</li>
+							<li class="fragment">
+								Guarde la versión hablada como un archivo de audio. Utilice un formato de audio ampliamente disponible y compatible con reproductores multimedia.
+							</li>
+						</ul>
+					</section>
+					<section>
+						<ul>
+							<li>
+								Proporcione un enlace a la versión de audio.		
+							</li>
+							<li class="fragment">
+								Identifique el formato de audio (por ejemplo, .MP3, .WAV, .AU, etc.).
+							</li>
+							<li class="fragment">
+								Proporcione un enlace a un reproductor multimedia que admita el formato.
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h4>G153: Hacer que el texto sea más fácil de leer.</h4>
+						<p class="fragment">
+							El objetivo de esta técnica es lograr que el texto de la página Web no sea difícil de leer. Es probable que los usuarios
+							con discapacidades que dificultan la decodificación de palabras y oraciones tengan problemas para leer y comprender
+							textos complejos. Si el texto no requiere una habilidad de lectura más avanzada que el nivel de educación secundaria
+							inferior, no se necesitan suplementos ni versiones alternativas.
+						</p>
+					</section>
+					<section>
+						<p>Para reducir la complejidad del texto:</p>
+						<ul>
+							<li class="fragment">
+								Desarrollar un solo tema o subtema por párrafo.
+							</li>
+							<li class="fragment">
+								Use las formas de oración más simples de acuerdo con el propósito del contenido. Por ejemplo, la forma de oración más
+								simple para inglés consiste en Sujeto-Verbo-Objeto, como en John golpeó la pelota o El sitio web se ajusta a WCAG 2.0.
+							</li>
+						</ul>
+					</section>
+					<section>
+						<ul>
+							<li>
+								Use oraciones que no sean más largas que la longitud típica aceptada para la educación secundaria. (Nota: en inglés son
+								25 palabras).
+							</li>
+							<li class="fragment">
+								Considere dividir oraciones más largas en dos.
+							</li>
+							<li class="fragment">
+								Usa oraciones que no contengan más de dos conjunciones.
+							</li>
+						</ul>
+					</section>
+					<section>
+						<ul>
+							<li>
+								Indicar relaciones lógicas entre frases, oraciones, párrafos o secciones del texto.
+							</li>
+							<li class="fragment">
+								Evite la jerga profesional, la jerga y otros términos con un significado especializado que puede no ser claro para las
+								personas.
+							</li>
+							<li class="fragment">
+								Reemplace palabras largas o desconocidas con términos más cortos y comunes.
+							</li>
+							<li class="fragment">
+								Eliminar palabras redundantes, es decir, palabras que no cambian el significado de la oración.
+							</li>
+						</ul>
+					</section>
+					<section>
+						<ul>
+							<li>
+								Use sustantivos simples o frases nominales cortas.
+							</li>
+							<li class="fragment">
+								Elimine palabras o frases complejas que podrían reemplazarse con palabras de uso más común sin cambiar el significado de
+								la oración.
+							</li>
+							<li class="fragment">
+								Utilice listas numeradas o con viñetas en lugar de párrafos que contengan largas series de palabras o frases separadas
+								por comas.
+							</li>
+							<li class="fragment">
+								Deje claras las referencias a los pronombres y las referencias a otros puntos del documento.
+							</li>
+						</ul>
+					</section>
+					<section>
+						<ul>
+							<li>
+								Use la voz activa para documentos escritos en inglés y otros idiomas occidentales, a menos que haya una razón específica
+								para usar construcciones pasivas. Las oraciones en voz activa suelen ser más cortas y fáciles de entender que las de voz
+								pasiva.
+							</li>
+							<li class="fragment">
+								Usa los tiempos verbales de manera consistente.
+							</li>
+							<li class="fragment">
+								Use nombres y etiquetas consistentemente.
+							</li>
+						</ul>
+					</section>
+					<section>
+						<blockquote>
+							Las páginas de ayuda para una aplicación Web están escritas en un lenguaje que no es más avanzado que el nivel de
+							educación secundaria inferior.
+						</blockquote>
+					</section>
+					<section>
+						<h4>
+							G160: Proporcionar versiones en lenguaje de señas de información, ideas y procesos que deben entenderse para usar el
+							contenido
+						</h4>
+						<p class="fragment">
+							Para algunas personas sordas o con ciertas discapacidades cognitivas, el lenguaje de señas puede ser su primera lengua. Una versión en lenguaje de señas de la página puede ser más fácil de entender 
+							para ellos que una versión en lenguaje escrito.
+						</p>
+					</section>
+					<section>
+						<p>
+							El objetivo de esta técnica es proporcionar versiones de contenido en lenguaje de señas que ayuden a los usuarios de
+							señas a comprender textos difíciles que describen conceptos o procesos. El contenido del lenguaje de señas se
+							proporciona además del texto.
+						</p>
+					</section>
+					<section>
+						<p>
+							Dado que se trata de contenido complementario (y no lenguaje de señas para el habla en el contenido), debe verse como
+							separado del contenido y no necesariamente sincronizado. Aunque puede haber ocasiones en las que sería útil, no es
+							obligatorio.
+						</p>
+					</section>
+					<section>
+						<p>
+							Para que la versión en lenguaje de señas esté disponible con el resto del contenido de la página web, el video puede
+							estar incrustado en la página web directamente o la página web puede incluir un enlace que abre un reproductor de video
+							en una ventana separada. La versión en lenguaje de señas también podría proporcionarse a través de un enlace a una
+							página web separada que muestre el video.
+						</p>
+					</section>
+					<section>
+						<p>
+							El lenguaje de señas es un lenguaje visual tridimensional que utiliza las manos, los brazos, los hombros, la cabeza, la
+							cara, los labios y la lengua del señante. Para que los espectadores entiendan lo que se está firmando, el video debe
+							registrar el lenguaje de señas por completo. En términos generales, el firmante debe estar lo más cerca posible de la
+							cámara sin correr el riesgo de cortes (como manos que se mueven fuera del video).
+						</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>3.1.6 Pronunciación - Nivel AAA</h3>
+						<ul>
+							<li class="fragment">
+								Tener dificultad para decodificar palabras.
+							</li>
+							<li class="fragment">
+								Tener dificultad para usar el contexto para ayudar a comprender.
+							</li>
+							<li class="fragment">
+								Usar tecnologías que lean las palabras en voz alta.
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h4>G120: Proporcionar la pronunciación inmediatamente después de la palabra</h4>
+						<p class="fragment">
+							El objetivo de esta técnica es hacer que la pronunciación de una palabra esté disponible proporcionando la pronunciación
+							después de la palabra al menos la primera vez que aparece en una página web.
+						</p>
+					</section>
+					<section>
+						<p>
+							Cuando una página web contiene palabras con la misma ortografía pero pronunciaciones diferentes, esta técnica no es
+							adecuada para proporcionar la pronunciación a menos que se proporcione para cada caso.
+						</p>
+					</section>
+					<section>
+						<p>
+							Esta técnica se aplica a la primera aparición de una abreviatura en una página Web. Al combinar varios recursos en una
+							sola página web, la abreviatura se expandiría al comienzo de cada recurso. En este caso, sin embargo, puede ser más
+							apropiado utilizar una técnica diferente para proporcionar la forma expandida.
+						</p>
+					</section>
+					<section>
+						<pre data-id="code-animation">
+							<code class="hljs" data-trim data-line-numbers type="text/template">
+								<p> 慶應大学 (Keiōgijuku)</p>
+							</code>
+						</pre>
+						<p>
+							En el siguiente ejemplo de texto en japonés, la información que proporciona la pronunciación se presenta entre paréntesis inmediatamente después del texto.
+						</p>
+					</section>
+					<section>
+						<h4>G121: Enlace a pronunciaciones</h4>
+						<p class="fragment">
+							El objetivo de esta técnica es hacer disponible la pronunciación de una palabra proporcionando información sobre la
+							pronunciación, ya sea dentro de la misma página web o en una página web diferente, y estableciendo un vínculo entre el
+							elemento y su pronunciación.
+						</p>
+					</section>
+					<section>
+						<h4>G62: Proporcionar un glosario</h4>
+						<p class="fragment">
+							El objetivo de esta técnica es hacer que la definición de una palabra, frase o abreviatura esté disponible
+							proporcionando la definición en un glosario. Un glosario es una lista alfabética de palabras, frases y abreviaturas con
+							sus definiciones.
+						</p>
+					</section>
+					<section>
+						<h4>G163: uso de marcas diacríticas estándar que se pueden desactivar</h4>
+						<p class="fragment">
+							El objetivo de esta técnica es proporcionar a los usuarios un mecanismo para activar o desactivar los signos diacríticos
+							estándar.
+						</p>
+					</section>
+					<section>
+						<p>
+							Muchos idiomas usan signos diacríticos para indicar la pronunciación de las palabras o para ayudar
+							a distinguir entre palabras. Algunos idiomas pueden usar signos diacríticos para denotar vocales, para indicar la
+							duplicación de consonantes, para indicar la ausencia de una vocal o una consonante, o para otros fines. Aunque el texto
+							sin tales signos diacríticos puede ser legible, la adición de signos diacríticos puede mejorar la legibilidad.
+						</p>
+					</section>
+					<section>
+						<p>
+							Una página Web en hawaiano muestra todos los signos diacríticos de forma predeterminada y proporciona enlaces que
+							permiten a los usuarios seleccionar el nivel de visualización de los signos diacríticos:
+						</p>
+					</section>
+					<section>
+						<h4>H62: Usando el elemento rubí</h4>
+						<p class="fragment">
+							El objetivo de esta técnica es utilizar la anotación Ruby para proporcionar información sobre la pronunciación y el
+							significado de un texto en el que el significado está determinado por la pronunciación.
+						</p>
+					</section>
+					<section>
+						<p>
+							Hay muchos idiomas en los que una secuencia de texto puede significar diferentes cosas dependiendo de cómo se pronuncie
+							el texto. Esto es común en los idiomas de Asia oriental, así como en el hebreo, el árabe y otros idiomas; también ocurre
+							en inglés y otros idiomas de Europa occidental
+						</p>
+					</section>
+					<section>
+						<p>
+							Ruby Annotation permite al autor anotar un "texto base", proporcionando una guía para la pronunciación y, en algunos
+							casos, también una definición. Ruby se usa comúnmente para texto en japonés y otros idiomas de Asia oriental. Ruby
+							Annotation se define como un módulo para XHTML 1.1 o HTML5.
+						</p>
+					</section>
+					<section>
+						<pre data-id="code-animation">
+							<code class="hljs" data-trim data-line-numbers type="text/template">
+								<p>Cuando hablamos de estas pautas, a menudo las llamamos simplemente
+									<rubí>
+										<rb>WCAG</rb>
+										<rp>(</rp>
+										<rt>Wuh-KAG</rt>
+										<rp>)</rp>
+									</rubí>.
+								</p>
+							</code>
+						</pre>
+						<p>Cuando hablamos de estas pautas, a menudo las llamamos simplemente
+							<rubí>
+								<rb>WCAG</rb>
+								<rp>(</rp>
+								<rt>Wuh-KAG</rt>
+								<rp>)</rp>
+							</rubí>.
+						</p>
+					</section>
+				</section>
+				<section>
+					<h2>Robusto 4.1 Compatible</h2>
+					<ul>
+						<li class="fragment">4.1.1 Análisis</li>
+						<li class="fragment">4.1.2 Nombre, Rol, Valor</li>
+						<li class="fragment">4.1.3 Mensaje de estado</li>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<h3>4.1.1 Análisis - Nivel A</h3>
+						<ul>
+							<li class="fragment">
+								Asegurarse de que las páginas Web tengan etiquetas completas de inicio y fin y estén anidadas de acuerdo con las especificaciones, ya que ayuda a garantizar que las tecnologías de asistencia
+								puedan analizar el contenido con precisión y sin fallar.
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h4>G134: Validación de páginas web</h4>
+						<p class="fragment">
+							El objetivo de esta técnica es evitar ambigüedades en las páginas web que a menudo resultan del código que no se valida
+							frente a las especificaciones formales.
+						</p>
+					</section>
+					<section>
+						<p>
+							Se utiliza el mecanismo de cada tecnología para especificar la tecnología y la versión de la tecnología, y la página web
+							se valida frente a la especificación formal de esa tecnología. Si hay disponible un validador para esa tecnología, el
+							desarrollador puede usarlo.
+						</p>
+					</section>
+					<section>
+						<p>
+							La validación generalmente eliminará las ambigüedades (y más) porque un paso esencial en la validación es verificar el
+							uso adecuado del marcado de esa tecnología (en un lenguaje de marcado) o código (en otras tecnologías). La validación no
+							verifica necesariamente la conformidad total con una especificación, pero es el mejor medio para verificar
+							automáticamente el contenido con respecto a su especificación.
+						</p>
+					</section>
+					<section>
+						<p>
+							Las páginas HTML incluyen una declaración de tipo de documento (a veces denominada <strong>!DOCTYPE</strong> declaración) y son válidas
+							según la versión de HTML especificada por la declaración de tipo de documento. El desarrollador puede usar validadores
+							fuera de línea o en línea (ver Recursos a continuación) para verificar la validez de las páginas HTML.
+						</p>
+					</section>
+					<section>
+						<h4>G192: Totalmente conforme a las especificaciones</h4>
+						<p class="fragment">
+							Cuando los lenguajes de marcado se utilizan de una manera que se ajusta completamente a sus especificaciones, se cumplen
+							todos los requisitos de 4.1.1. Por lo tanto, si bien no se requiere el cumplimiento total de las especificaciones para
+							cumplir con las WCAG 2.0, es una mejor práctica y es suficiente para cumplir el Criterio de Conformidad 4.1.1.
+						</p>
+					</section>
+					<section>
+						<p>
+							Se crea una página con cuidado para asegurarse de que todas las tecnologías se utilicen de acuerdo con las
+							especificaciones. Se pasa por un validador y se corrigen todos los errores identificados. También se verifican los
+							requisitos de especificación que no pueden identificarse mediante la validación y se corrigen las fallas.
+						</p>
+					</section>
+					<section>
+						<h4>H88: Uso de HTML de acuerdo con las especificaciones</h4>
+						<p class="fragment">
+							El objetivo de esta técnica es utilizar HTML y XHTML según sus respectivas especificaciones. Las especificaciones
+							tecnológicas definen el significado y el manejo adecuado de las características de la tecnología.
+						</p>
+					</section>
+					<section>
+						<p>
+							El uso de esas funciones de la manera descrita por la especificación garantiza que los agentes de usuario, incluidas las
+							tecnologías de asistencia, podrán presentar representaciones de la función que sean precisas para la intención del autor
+							e interoperables entre sí.
+						</p>
+					</section>
+					<section>
+						<p>
+							En el momento en que se publicó esta técnica, las versiones apropiadas de estas tecnologías son HTML 4.01 y XHTML 1.0.
+							HTML 4.01 es la última versión madura de HTML, que proporciona funciones de accesibilidad específicas y es ampliamente
+							compatible con los agentes de usuario. XHTML 1.0 proporciona las mismas funciones que HTML 4.01, excepto que utiliza una
+							estructura XML y tiene una sintaxis más estricta que la estructura HTML. Las versiones posteriores de estas tecnologías
+							no están maduras y/o no son ampliamente compatibles con los agentes de usuario en este momento.
+						</p>
+					</section>
+					<section>
+						<h4>SL33: uso de XAML bien formado para definir una interfaz de usuario de Silverlight</h4>
+						<p class="fragment">
+							El objetivo de esta técnica es utilizar las características del lenguaje XAML para admitir los requisitos básicos de
+							análisis en los que se basan tanto las aplicaciones como los marcos de accesibilidad.
+						</p>
+					</section>
+					<section>
+						<p>
+							Esta técnica explica el papel de XAML en el desarrollo general de Silverlight y la arquitectura de la aplicación, en
+							particular para definir los elementos que componen una interfaz de usuario de Silverlight. Esta técnica también presenta
+							algunos datos básicos sobre XAML como lenguaje; también se incluye más información de esta naturaleza en <a href="https://www-w3-org.translate.goog/TR/WCAG20-TECHS/silverlight_notes.html?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es-419&_x_tr_pto=sc&_x_tr_sch=http">Silverlight
+							Technology Notes</a>.
+						</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>4.1.2 Nombre, Rol, Valor - Nivel A</h3>
+						<p class="fragment">
+							Proporcionar información sobre roles, estados y valores en todos los componentes de la interfaz de usuario, permite
+							la compatibilidad con la tecnología de asistencia, como lectores de pantalla, lupas
+							de pantalla y software de reconocimiento de voz, utilizado por personas con discapacidades.
 						</p>
 					</section>
 				</section>
