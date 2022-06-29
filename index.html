@@ -1167,6 +1167,284 @@
 							de pantalla y software de reconocimiento de voz, utilizado por personas con discapacidades.
 						</p>
 					</section>
+					<section>
+						<h4>ARIA14: uso de aria-label para proporcionar una etiqueta invisible donde no se puede usar una etiqueta visible</h4>
+						<p class="fragment">
+							Para los usuarios videntes, el contexto y la apariencia visual de un elemento pueden proporcionar pistas suficientes
+							para determinar el propósito. Un ejemplo es la 'X' que se usa a menudo en la esquina superior derecha de los divs
+							emergentes para indicar el control para cerrar el div.
+						</p>
+					</section>
+					<section>
+						<p>
+							En algunas situaciones, a los elementos se les puede dar el atributo <strong>aria-label</strong> para proporcionar un nombre accesible
+							para situaciones en las que no hay una etiqueta visible debido a un enfoque de diseño o diseño elegido, pero el contexto
+							y la apariencia visual del control aclaran su propósito.
+						</p>
+					</section>
+					<section>
+						<p>
+							En otras situaciones, a los elementos se les puede dar el atributo <strong>aria-label</strong> para proporcionar un nombre accesible
+							cuando el elemento de etiquetado HTML nativo no es compatible con el control; por ejemplo, cuando se usa un <strong>div</strong> conjunto
+							para <strong>contentEditable</strong> en lugar de elementos de formulario nativos como <strong>input type="text"</strong>o <strong>textarea</strong> para proporcionar un
+							experiencia de edición de texto más rica.
+						</p>
+					</section>
+					<section>
+						<p>
+							En una página, un enlace muestra un cuadro emergente (un div) con información adicional. El elemento 'cerrar' se
+							implementa como un botón que contiene simplemente la letra 'x'. La propiedad aria-label="close"se utiliza para
+							proporcionar un nombre accesible al botón.
+						</p>
+						<pre data-id="code-animation">
+							<code class="hljs" data-trim data-line-numbers type="text/template">
+								<div id="box">
+									This is a pop-up box.
+									<button aria-label="Close" onclick="document.getElementById('box').style.display='none';"
+										class="close-button">X</button>
+								</div>
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h4>ARIA16: uso de aria-labelledby para proporcionar un nombre para los controles de la interfaz de usuario</h4>
+						<p class="fragment">
+							El propósito de esta técnica es proporcionar nombres para los controles de la interfaz de usuario que la tecnología de
+							asistencia pueda leer.
+						</p>
+					</section>
+					<section>
+						<p>
+							WAI-ARIA proporciona una forma de asociar texto con una sección, dibujo, elemento de formulario, imagen, etc.,
+							utilizando la <strong>aria-labelledby</strong> propiedad. Esta técnica utiliza el <strong>aria-labelledby</strong> atributo para asociar un control de
+							interfaz de usuario, como un campo de formulario, con texto en la página que lo etiqueta.
+						</p>
+					</section>
+					<section>
+						<p>
+							Al igual que <strong>aria-describedby</strong>, <strong>aria-labelledby</strong> puede aceptar múltiples ID para apuntar a otros elementos de la página
+							usando una lista separada por espacios. Esta capacidad es <strong>aria-labelledby</strong> especialmente útil en situaciones en las que
+							los usuarios videntes utilizan información del contexto circundante para identificar un control.
+						</p>
+					</section>
+					<section>
+						<p>El siguiente es un ejemplo del <strong>aria-labelledby</strong> uso en un campo de texto simple para proporcionar una etiqueta en una
+						situación en la que no hay texto disponible para una etiqueta dedicada pero hay otro texto en la página que se puede
+						usar para etiquetar con precisión el control.</p>
+						<pre data-id="code-animation">
+							<code class="hljs" data-trim data-line-numbers type="text/template">
+								<input name="searchtxt" type="text" aria-labelledby="searchbtn">
+								<input name="searchbtn" id="searchbtn" type="submit" value="Search">
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h4>G108: Uso de funciones de marcado para exponer el nombre y el rol, permitir que las propiedades configurables por el
+						usuario se establezcan directamente y proporcionar notificaciones de cambios</h4>
+					</section>
+					<section>
+						<p>
+							El objetivo de esta técnica es permitir que la tecnología de asistencia comprenda el contenido Web para que pueda
+							transmitir información equivalente al usuario a través de una interfaz de usuario alternativa y permitirle operar los
+							controles a través del AT (Assistive Technologies).
+						</p>
+					</section>
+					<section>
+						<p>
+							Esta técnica implica el uso de características estándar, documentadas y compatibles para exponer estas propiedades a AT.
+							Se basa en el hecho de que estos controles estándar en navegadores estándar cumplen con los requisitos.
+						</p>
+					</section>
+					<section>
+						<p>
+							Para HTML estas suposiciones son buenas. También pueden ser apropiados para algunas otras tecnologías.
+						</p>
+					</section>
+					<section>
+						<p>
+							Incluso cuando los componentes soportan la accesibilidad, es esencial que el autor proporcione cierta información. Por
+							ejemplo, un control puede tener la capacidad de proporcionar un nombre pero el autor todavía tiene que proporcionar el
+							nombre. Sin embargo, es posible que ya se haya proporcionado el atributo de función, ya que es un componente estándar
+							con una función fija.
+						</p>
+					</section>
+					<section>
+						<p>
+							<strong>Ejemplo:</strong> una página web escrita en HTML o XHTML utiliza controles de formulario estándar e identifica el control de
+							formulario mediante el atributo de título. El agente de usuario hace que la información sobre estos controles, incluido
+							el nombre, esté disponible para la tecnología de asistencia a través del DOM y a través de una API de accesibilidad
+							específica de la plataforma.
+						</p>
+					</section>
+					<section>
+						<p>
+							<h4>G135: Uso de las características de la API de accesibilidad de una tecnología para exponer nombres y roles, para
+							permitir que las propiedades configurables por el usuario se establezcan directamente y para proporcionar notificaciones
+							de cambios.</h4>
+						</p>
+					</section>
+					<section>
+						<p>
+							El objetivo de esta técnica es permitir que la tecnología de asistencia comprenda el contenido web para que pueda
+							transmitir información equivalente al usuario a través de una interfaz de usuario alternativa.
+						</p>
+					</section>
+					<section>
+						<p>
+							A veces, el contenido no se crea utilizando un lenguaje de marcado, sino utilizando un lenguaje o herramientas de
+							programación. En muchos casos, estas tecnologías tienen componentes de interfaz que ya están programados para
+							interactuar con las API de accesibilidad. Si un autor usa estos componentes y completa las propiedades (p. ej., nombre,
+							etc.), los componentes de la interfaz de usuario resultantes en el contenido serán accesibles para la tecnología de
+							asistencia.
+						</p>
+					</section>
+					<section>
+						<p>
+							Una página Web usa java para crear un applet. Los objetos oscilantes de Java (p. ej., pulsadores) se utilizan porque
+							tienen propiedades de accesibilidad integradas a las que se puede acceder desde tecnología de asistencia escrita en Java
+							y, con Java Access Bridge, aquellas escritas en otros lenguajes que utilizan la API de accesibilidad del sistema
+							operativo. El autor completa los valores de los componentes y el resultado es accesible para AT.
+						</p>
+					</section>
+					<section>
+						<h4>G10: crear componentes utilizando una tecnología que admita las características de la API de accesibilidad de las
+						plataformas en las que se ejecutarán los agentes de usuario para exponer los nombres y roles, permitir que las
+						propiedades configurables por el usuario se establezcan directamente y proporcionar notificaciones de cambios</h4>
+					</section>
+					<section>
+						<p>
+							El objetivo de esta técnica es permitir que la tecnología de asistencia comprenda el contenido web para que pueda
+							transmitir información equivalente al usuario a través de una interfaz de usuario alternativa.
+						</p>
+					</section>
+					<section>
+						<p>
+							A veces, el contenido no se crea utilizando un lenguaje de marcado, sino utilizando un lenguaje o herramientas de
+							programación. En muchos casos, estas tecnologías tienen componentes de interfaz que ya están programados para
+							interactuar con las API de accesibilidad. Si un autor usa estos componentes y completa las propiedades (p. ej.,
+							nombre,
+							etc.), los componentes de la interfaz de usuario resultantes en el contenido serán accesibles para la tecnología de
+							asistencia.
+						</p>
+					</section>
+					<section>
+						<p>
+							Una vez finalizado, el componente personalizado debe probarse para el soporte de accesibilidad.
+						</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>4.1.3 Mensaje de estado - Nivel AA</h3>
+						<p class="fragment">
+							Cuando se asignan roles o propiedades apropiadas a los mensajes de estado, los lectores de pantalla hablan el nuevo
+							contenido de manera que ayude a los usuarios ciegos y de baja visión.
+						</p>
+					</section>
+					<section>
+						<p>
+							La mayoría de los usuarios videntes pueden observar el texto agregado periféricamente a la ventana gráfica. Dicho
+							contenido proporciona información adicional sin afectar el punto
+							de vista actual del usuario.
+						</p>
+					</section>
+					<section>
+						<p>
+							La capacidad de una tecnología de asistencia para anunciar un contenido de texto tan nuevo e importante permite que más
+							usuarios se beneficien de un conocimiento de la información
+							de manera equivalente.
+						</p>
+					</section>
+					<section>
+						<h4>ARIA22: Uso de role=status para presentar mensajes de estado</h4>
+						<p class="fragment">
+							Esta técnica utiliza el <strong>status</strong> rol de la especificación ARIA para notificar a Assistive Technologies (AT) cuando el
+							contenido se ha actualizado con información sobre el estado del usuario o de la aplicación.
+						</p>
+					</section>
+					<section>
+						<p>
+							Esto se hace agregando <strong>role="status"</strong> al elemento que contiene el mensaje de estado . El rol de región en vivo de aria
+							tiene un valor <strong>status</strong> implícito de lo que permite que se notifique a un usuario a través de AT (como un lector de
+							pantalla) cuando se agregan <a href="https://www-w3-org.translate.goog/TR/WCAG21/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es-419&_x_tr_pto=sc#dfn-status-messages">mensajes de estado.</a>
+						</p>
+					</section>
+					<section>
+						<p>
+							El rol de también tiene un valor predeterminado de , por lo que se actualiza el contenedor marcado con un rol
+							de <strong>aria-livepolitestatusaria-atomictruestatus</strong> hará que el AT presente todo el contenido del contenedor al usuario,
+							incluidas las etiquetas definidas por el autor (o elementos anidados adicionales).
+						</p>
+					</section>
+					<section>
+						<p>
+							Dicho contexto adicional puede ser crítico cuando el texto del mensaje de estado por sí solo no proporcione un
+							equivalente a la experiencia visual. El contenido del contenedor aria-live es leído automáticamente por el AT, sin que
+							el AT tenga que centrarse en el lugar donde se muestra el texto. Consulte el estado (rol) de WAI-ARIA 1.1 para obtener
+							más detalles.
+						</p>
+					</section>
+					<section>
+						<p>
+							Después de que un usuario presiona un botón Buscar, el contenido de la página se actualiza para incluir los resultados
+							de la búsqueda, que se muestran en una sección debajo del botón Buscar. El cambio de contenido también incluye el
+							mensaje "Se devolvieron 5 resultados" cerca de la parte superior de este nuevo contenido. A este texto se le asigna un
+							papel apropiado para un mensaje de estado. Un lector de pantalla anunciará "Cinco resultados devueltos".
+						</p>
+					</section>
+					<section>
+						<pre data-id="code-animation">
+							<code class="hljs" data-trim data-line-numbers type="text/template">
+								<div role="status">5 results returned.</div>
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h4>ARIA19: Uso de ARIA role=alert o Live Regions para identificar errores</h4>
+						<p class="fragment">
+							El propósito de esta técnica es notificar a Assistive Technologies (AT) cuando ocurre un error de entrada. El
+							<strong>aria-live</strong> atributo hace posible que se notifique a un AT (como un lector de pantalla) cuando se inyectan mensajes de
+							error en un contenedor de Live Region. <strong>aria-live</strong>  El AT lee automáticamente el contenido dentro de la región, sin que el
+							AT tenga que enfocarse en el lugar donde se muestra el texto.
+						</p>
+					</section>
+					<section>
+						<p>
+							También hay una serie de <a href="https://www-w3-org.translate.goog/WAI/ARIA/apg/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es-419&_x_tr_pto=sc#chobet">roles de región en vivo de casos especiales</a> que se pueden usar en lugar de aplicar directamente
+							las propiedades de la región en vivo.
+						</p>
+					</section>
+					<section>
+						<h4>ARIA23: Uso role=log para identificar actualizaciones de información secuencial</h4>
+						<p class="fragment">
+							El propósito de esta técnica es notificar a Assistive Technologies (AT) cuando se ha agregado contenido a la información
+							secuencial relacionada con el historial o los registros de la aplicación.
+						</p>
+					</section>
+					<section>
+						<p>
+							El rol de región en vivo de aria tiene un valor logimplícito de y un valor de , lo que permite que se notifique a un
+							usuario a través de AT (como un lector de pantalla) cuando se agregan mensajes de registro. El AT lee automáticamente el
+							nuevo contenido dentro de la región aria-live, sin que el AT tenga que enfocarse en el lugar donde se muestra el texto.
+							Consulte el <a href="https://www-w3-org.translate.goog/TR/wai-aria-1.1/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es-419&_x_tr_pto=sc#log">registro (rol) de WAI-ARIA 1.1</a> para 
+							obtener más detalles. <strong>aria-livepolitearia-atomicfalse</strong>
+						</p>
+					</section>
+					<section>
+						<pre data-id="code-animation">
+							<code class="hljs" data-trim data-line-numbers type="text/template">
+								<div id="chatRegion" role="log" aria-labelledby="chatHeading">
+									<h4 id="chatHeading">Chat History</h4>
+									<ul id="conversation">
+										<li>The latest chat message</li>
+									</ul>
+								</div>
+							</code>
+						</pre>
+					</section>
+				</section>
+				<section data-background="https://media.giphy.com/media/ZlL9U0DNaOdFK/giphy.gif">
+					<h2>Por fin...</h2>
 				</section>
 			</div>
 		</div>
